@@ -25,7 +25,7 @@ const BackgroundLine: React.FunctionComponent<Props> = ({price, entry: {amount, 
 			<Text style={styles.text}>{formatNumber(price, precision)}</Text>
 			<Text style={styles.text}>{formatNumber(total, precision)}</Text>
 			<Text style={styles.text}>{formatNumber(amount, precision)}</Text>
-			<Text style={styles.text}>{formatNumber(count, 0)}</Text>
+			<Text style={styles.smallText}>{formatNumber(count, 0)}</Text>
 		</View>
 	);
 }
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
 		backgroundColor: '#f5f5f5',
 		marginTop: 1,
 		marginHorizontal: 4,
-		paddingVertical: 4,
 		flexDirection: 'row',
 		alignItems: 'center',
     justifyContent: 'space-between',
@@ -50,10 +49,18 @@ const styles = StyleSheet.create({
 		flexDirection: 'row-reverse',
 	},
 	markerReverse: {
+		marginLeft: 4,
 		backgroundColor: 'green',
 	},
 	text: {
-		fontSize: 10,
+		flex: 2,
+		fontSize: 11,
+		paddingVertical: 4,
+		textAlign: 'right',
+	},
+	smallText: {
+		flex: 1,
+		fontSize: 11,
 	}
 })
 

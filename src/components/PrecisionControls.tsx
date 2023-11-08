@@ -33,7 +33,9 @@ const styles = StyleSheet.create({
 	},
 	button: {
 		padding: 12,
+		paddingHorizontal: 16,
 		backgroundColor: 'green',
+		borderRadius: 20,
 	},
 	disabled: {
 		opacity: 0.5,

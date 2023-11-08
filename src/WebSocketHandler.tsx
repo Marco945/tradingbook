@@ -76,17 +76,22 @@ const WebSocketHandler = () => {
 	}, [webSocketConnected])
 
 	return (
-		<View>
+		<View style={styles.container}>
 			<TouchableOpacity style={styles.button} onPress={handleConnection}><Text>{webSocketConnected ? 'Disconnect' : 'Connect'}</Text></TouchableOpacity>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
+	container: {
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
 	button: {
 		marginBottom: 40,
 		padding: 12,
-		backgroundColor: 'cyan'
+		backgroundColor: 'green',
+		borderRadius: 20,
 	},
 })
 
